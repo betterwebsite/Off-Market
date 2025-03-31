@@ -113,9 +113,10 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/sparkhomeimage.png?updatedAt=1743374558318">
-        <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/sparkhomeimage.png?updatedAt=1743374558318">
-        <img loading="lazy" decoding="async" src="https://ik.imagekit.io/6ycdefzj5/sparkhomeimage.png?updatedAt=1743374558318" alt="meeting" width="1920" height="1200" aria-hidden="true">
+        <!-- {% getUrl '/assets/images/banner.jpg' | resize({ width: 900, height:600}) | webp %} -->
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/sparkhomeimage.jpg' | resize({ width: 1000, height:800}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/sparkhomeimage.jpg' | resize({ width: 1000, height:800}) | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/sparkhomeimage.jpg' | resize({ width: 1000, height:800}) | webp %}" alt="meeting" width="1920" height="1200" aria-hidden="true">
     </picture>
 </section>
 
